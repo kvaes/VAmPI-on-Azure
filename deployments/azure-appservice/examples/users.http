@@ -210,3 +210,41 @@ Content-Length: 51
   "username": "testwafadmin",
   "password": "securepassword"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### User details
+
+GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/admin HTTP/1.1
+
+
+### Let us see how it will react to adding a quote as user name...
+
+GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/' HTTP/1.1
