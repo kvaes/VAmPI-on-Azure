@@ -7,3 +7,6 @@ Also check api_vies/users.py & models/user_model.py
 Install sqlmap, and then execute the following
 * sqlmap -u "https://kvaesvampiinsecure.azurewebsites.net/users/v1/*admin*" --method=GET --dump
 * sqlmap -u "https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/*admin*" --method=GET --dump
+* sqlmap -u "https://kvaesvampisecure.azurewebsites.net/users/v1/*admin*" --method=GET --dump
+
+This allows you to test vulnerable code when exposed directly, or via a WAF. And what the result would be with the alternative secured code.
