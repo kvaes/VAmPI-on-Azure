@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  vampi:
+    image: erev0s/vampi:latest
+    ports:
+    - "8080:5000"
+    restart: always
+    environment:
+      vulnerable: 0
