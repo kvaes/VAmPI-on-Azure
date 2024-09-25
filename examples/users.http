@@ -1,3 +1,6 @@
+
+GET https://kvaesvampiinsecure.azurewebsites.net/createdb
+
 ### List the users
 
 GET https://kvaesvampiinsecure.azurewebsites.net/users/v1 HTTP/1.1
@@ -158,3 +161,24 @@ Content-Length: 51
 ### Check if it worked
 
 GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/_debug HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Check for SQL Injection Feasability (use a browser)
+
+GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/name'  HTTP/1.1
