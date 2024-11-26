@@ -84,7 +84,7 @@ GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/_debug HTTP/1.1
 
 
 
-
+### Check ./api_views/users.py (line 44)
 ### create an admin user
 
 POST /users/v1/register HTTP/1.1
@@ -178,7 +178,7 @@ GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/_d
 
 
 
-
+### Check ./models/user_mode.py (line 71)
 ### Check for SQL Injection Feasability (use a browser)
 
 GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/name'  HTTP/1.1
