@@ -181,4 +181,9 @@ GET https://kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net/insecure/users/v1/_d
 ### Check ./models/user_mode.py (line 71)
 ### Check for SQL Injection Feasability (use a browser)
 
-GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/name'  HTTP/1.1
+### Check for SQL Injection Feasability (use a browser) -Part 1
+GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/testwafadmin HTTP/1.1
+
+
+### Check for SQL Injection Feasability (use a browser) -The sequel
+GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/name' HTTP/1.1
