@@ -187,3 +187,7 @@ GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/testwafadmin HTTP/1.1
 
 ### Check for SQL Injection Feasability (use a browser) -The sequel
 GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/testwafadmin' HTTP/1.1
+
+
+### Check for SQL Injection Feasability (use a browser) -The reboot
+GET https://kvaesvampisecure.azurewebsites.net/users/v1/testwafadmin' HTTP/1.1
