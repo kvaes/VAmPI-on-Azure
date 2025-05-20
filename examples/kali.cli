@@ -1,3 +1,6 @@
+# pip3 install wafw00f
+# pip install --upgrade sqlmap
+
 ## Move to location of caching info
 cd /home/kvaes/.local/share/sqlmap/output
 
