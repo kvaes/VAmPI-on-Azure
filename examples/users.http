@@ -141,12 +141,12 @@ GET https://kvaesvampiinsecure.azurewebsites.net/users/v1/_debug HTTP/1.1
 
 ### List Users via FrontDoor
 
-GET https://kvaesfrontdoorvampi-anbbg2fshsc8cve9.b01.azurefd.net/insecure/users/v1/_debug HTTP/1.1
+GET https://kvaesfrontdoorvampi-anbbg2fshsc8cve9.b01.azurefd.net/users/v1/_debug HTTP/1.1
 
 ### Create an admin user via FrontDoor
 
-POST /insecure/users/v1/register HTTP/1.1
-Host: kvaestestvampi-g3dsbehwaghrgadx.b01.azurefd.net
+POST /users/v1/register HTTP/1.1
+Host: kvaesfrontdoorvampi-anbbg2fshsc8cve9.b01.azurefd.net
 Accept: application/json
 Content-Type: application/json
 Content-Length: 51
@@ -160,7 +160,7 @@ Content-Length: 51
 
 ### Check if it worked
 
-GET https://kvaesfrontdoorvampi-anbbg2fshsc8cve9.b01.azurefd.net/insecure/users/v1/_debug HTTP/1.1
+GET https://kvaesfrontdoorvampi-anbbg2fshsc8cve9.b01.azurefd.net/users/v1/_debug HTTP/1.1
 
 
 
