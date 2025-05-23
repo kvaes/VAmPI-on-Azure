@@ -2,6 +2,7 @@ import os
 import connexion
 from flask import jsonify
 from flask_sqlalchemy import SQLAlchemy
+from connexion.exceptions import ProblemException
 
 vuln_app = connexion.App(__name__, specification_dir='./openapi_specs')
 
@@ -22,4 +23,15 @@ def custom_401(error):
     return response
 
 
+def custom_problem_handler(error):
+    # Custom error handler for clarity in structure
+    response = jsonify({
+        "status": "fail",
+        "message": getattr(error, "detail", "An error occurred"),
+    })
+    response.status_code = error.status
+    return response
+
+
+vuln_app.add_error_handler(ProblemException, custom_problem_handler)
 vuln_app.add_api('openapi3.yml')

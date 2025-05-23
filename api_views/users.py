@@ -26,6 +26,23 @@ def debug():
     return return_value
 
 
+def me():
+    resp = token_validator(request.headers.get('Authorization'))
+    if "error" in resp:
+        return Response(error_message_helper(resp), 401, mimetype="application/json")
+    else:
+        user = User.query.filter_by(username=resp['sub']).first()
+        responseObject = {
+            'status': 'success',
+            'data': {
+                'username': user.username,
+                'email': user.email,
+                'admin': user.admin
+            }
+        }
+        return Response(json.dumps(responseObject), 200, mimetype="application/json")
+
+
 def get_by_username(username):
     if User.get_user(username):
         return Response(str(User.get_user(username)), 200, mimetype="application/json")
